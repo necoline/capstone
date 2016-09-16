@@ -4,6 +4,8 @@ import App from './containers/App';
 import NotFound from './components/NotFound';
 import { UserAuthWrapper } from 'redux-auth-wrapper';
 import Dashboard from './components/Dashboard';
+import NewProject from './components/NewProject';
+import MyProjects from './components/MyProjects';
 import Login from './components/Login';
 
 
@@ -21,6 +23,8 @@ export default (
     <Route path="/" component={App}>
       <Route path="/login" component={Login} />
       <Route path="/dashboard" component={UserIsAuthenticated(Dashboard)} />
+      <Route path="/newProject" component={UserIsAuthenticated(NewProject)} />
+      <Route path="/myProjects" component={UserIsAuthenticated(MyProjects)} />
       <Route path="*" component={NotFound} />
     </Route>
   </Route>

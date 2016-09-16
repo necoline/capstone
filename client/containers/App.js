@@ -29,6 +29,8 @@ class App extends React.Component {
       return (
         <div>
           <li><Link to="/dashboard">Dashboard</Link></li>
+          <li><Link to="/myProjects">My Projects</Link></li>
+          <li><Link to="/newProject">New Project</Link></li>
           <li><a onClick={() => this.props.dispatch(logout())}>Logout</a></li>
         </div>
       )
@@ -42,7 +44,7 @@ class App extends React.Component {
       <div>
         <nav>
           <div className="nav-wrapper">
-            <a href="#!" className="brand-logo">My App</a>
+            <a href="#!" className="brand-logo">Globe It</a>
             <a href="#" data-activates="mobile" className="button-collapse"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-med-and-down">
               {this.links()}
