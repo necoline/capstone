@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App';
-import { Router, browserHistory } from 'react-router';
+import { Router } from 'react-router';
 import routes from './routes';
-
-ReactDOM.render(<Router history={browserHistory} routes={routes} />, document.getElementById('content'));
-
+import { Provider } from 'react-redux';
+import store, { history } from './store';
+    //importing named function from store.js
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={history} routes={routes} />
+  </Provider>,
+  document.getElementById('content')
+ );

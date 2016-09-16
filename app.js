@@ -5,7 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect( 'mongodb://localhost/react-starter' );
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+mongoose.connect( 'mongodb://localhost/capstone' );
 
 var routes = require('./routes/index');
 
@@ -32,7 +34,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(require('express-session')({
+  secret: process.env.SESSION_SECRET || 'secret',
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
+var User = require('./models/user');
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+//API ROUTES
+app.use('/api/auth', auth);
 // error handlers
 
 // development error handler
