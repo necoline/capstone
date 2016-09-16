@@ -36,7 +36,7 @@ export const signup = (email, password, history, redirect) => {
 
 export const logout = () => {
  sessionStorage.removeItem('userId');
- sessionStorage.removeToken('token');
+ sessionStorage.removeItem('token');
  return { type: 'LOGOUT' };
 };
 
