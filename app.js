@@ -11,6 +11,7 @@ mongoose.connect( 'mongodb://localhost/capstone' );
 
 var routes = require('./routes/index');
 var auth = require('./routes/auth');
+var globe = require('./routes/globe');
 
 var app = express();
 
@@ -50,6 +51,7 @@ passport.deserializeUser(User.deserializeUser());
 
 //API ROUTES
 app.use('/api/auth', auth);
+app.use('/api/globe', globe);
 // error handlers
 
 // development error handler
