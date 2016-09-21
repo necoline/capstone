@@ -6,6 +6,7 @@ import { UserAuthWrapper } from 'redux-auth-wrapper';
 import Dashboard from './components/Dashboard';
 import NewProject from './components/NewProject';
 import MyProjects from './components/MyProjects';
+import Landing from './components/Landing';
 import Login from './components/Login';
 
 
@@ -21,6 +22,7 @@ const UserIsAuthenticated = UserAuthWrapper({
 export default (
   <Route>
     <Route path="/" component={App}>
+      <IndexRoute component={Landing} />
       <Route path="/login" component={Login} />
       <Route path="/dashboard" component={UserIsAuthenticated(Dashboard)} />
       <Route path="/newProject" component={UserIsAuthenticated(NewProject)} />

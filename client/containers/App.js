@@ -56,7 +56,6 @@ class App extends React.Component {
         </nav>
         {this.props.children}
         <div>
-          <li><Link to="/newProject">New Project</Link></li>
         </div>
       </div>
     )

@@ -35,7 +35,7 @@ addGlobe(e) {
 //
 render () {
   return (
-  <div className="center">
+  <div className="container">
     <form onSubmit={this.addGlobe} ref="form">
       <input placeholder="name" ref="name"></input>
       <input placeholder="category" ref="category"></input>
