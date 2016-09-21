@@ -13,10 +13,10 @@ router.post('/', (req, res) => {
   new Globe ({
     name: req.body.name,
     category: req.body.category,
-    latitude: [],
-    longitude: [],
-    magnitude: []
-  }).save( (err, course) => {
+    latitude: req.body.latitude,
+    longitude: req.body.longitude,
+    magnitude: req.body.magnitude
+  }).save( (err, globe) => {
     res.json(globe);
   });
 });
@@ -31,5 +31,6 @@ router.put('/:id', (req, res) => {
     })
   });
 });
+//delete the data point
 
 module.exports = router;
