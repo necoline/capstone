@@ -32,3 +32,4 @@ npm-debug.log
 public/vendor/
 
 *.DS_Store
+throwaway.js

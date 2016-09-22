@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { logout } from '../actions';
-let GlobeIT = require('../images/newglobeit.png')
-let bg = require('../images/bgg.png');
 
 class App extends React.Component {
   constructor(props) {
@@ -46,12 +44,7 @@ class App extends React.Component {
       <div>
         <nav>
           <div className="nav-wrapper">
-            <a href="#!" className="brand-logo">
-              <img 
-                src={GlobeIT}
-                style={{ marginTop: '10px', width: '44%' }} 
-              />
-            </a>
+            <a href="/" className="brand-logo">Globe GlobeIT</a>
             <a href="#" data-activates="mobile" className="button-collapse"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-med-and-down">
               {this.links()}
@@ -61,14 +54,8 @@ class App extends React.Component {
             </ul>
           </div>
         </nav>
-        <div style={
-          { 
-            background: 'url(../images/bgg.png) no-repeat center 100px fixed',
-            backgroundSize: 'contain',
-            height: '100vh'
-          }
-        }>
-          {this.props.children}
+        {this.props.children}
+        <div>
         </div>
       </div>
     )
