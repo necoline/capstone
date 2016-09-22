@@ -14,3 +14,8 @@ h2 {
 .brand-logo {
   font-family: 'Exo', sans-serif;
 }
+
+.background {
+  background-image: url('globe_sample.png');
+  background-repeat: no-repeat;
+}
