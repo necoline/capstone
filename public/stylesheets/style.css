@@ -7,7 +7,7 @@ h2 {
 }
 
 .nav-wrapper {
-  background-color: #1A237E;
+  background-color: #0d47a1;
   color: #18FFFF;
 }
 
@@ -15,7 +15,3 @@ h2 {
   font-family: 'Exo', sans-serif;
 }
 
-.background {
-  background-image: url('globe_sample.png');
-  background-repeat: no-repeat;
-}

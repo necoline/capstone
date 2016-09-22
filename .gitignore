@@ -31,4 +31,4 @@ npm-debug.log
 
 public/vendor/
 
-.DS_Store
+*.DS_Store
