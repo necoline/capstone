@@ -3,6 +3,8 @@
 let express = require('express');
 let router = express.Router();
 let Globe = require('../models/globe');
+var fs = require("fs");
+//let population = require('../client/components/globe/population.json');
 
 //Get home page
 router.get('/', function(req, res, next) {
@@ -32,5 +34,27 @@ router.put('/:id', (req, res) => {
   });
 });
 //delete the data point
+
+function readJSONFile(filename, callback) {
+  fs.readFile(filename, function (err, data) {
+    if(err) {
+      callback(err);
+      return;
+    }
+    try {
+      callback(null, JSON.parse(data));
+    } catch(exception) {
+      callback(exception);
+    }
+  });
+}
+
+router.get('/population', (req, res) => {
+  readJSONFile('/Users/cameronpacker/Desktop/JavaScript Info/Capstone/client/components/globe/population.json', function (err, json) {
+    if (err)
+      console.log(err)
+    res.json(json);
+  });
+})
 
 module.exports = router;
