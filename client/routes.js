@@ -8,7 +8,7 @@ import NewProject from './components/NewProject';
 import MyProjects from './components/MyProjects';
 import Landing from './components/Landing';
 import Login from './components/Login';
-
+import Team from './components/Meet-The-Team/Team';
 
 const UserIsAuthenticated = UserAuthWrapper({
   authSelector: state => state.auth,
@@ -24,6 +24,7 @@ export default (
     <Route path="/" component={App}>
       <IndexRoute component={Landing} />
       <Route path="/login" component={Login} />
+      <Route path="/team" component={Team} />
       <Route path="/dashboard" component={UserIsAuthenticated(Dashboard)} />
       <Route path="/newProject" component={UserIsAuthenticated(NewProject)} />
       <Route path="/myProjects" component={UserIsAuthenticated(MyProjects)} />
