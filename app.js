@@ -13,7 +13,7 @@ mongoose.connect(mongoUri)
 
 var routes = require('./routes/index');
 var auth = require('./routes/auth');
-// var globe = require('./routes/globe');
+var globe = require('./routes/globe');
 var data = require('./routes/data');
 
 var app = express();
@@ -54,7 +54,7 @@ passport.deserializeUser(User.deserializeUser());
 
 //API ROUTES
 app.use('/api/auth', auth);
-// app.use('/api/globe', globe);
+app.use('/api/globe', globe);
 app.use('/api/data', data);
 
 // error handlers

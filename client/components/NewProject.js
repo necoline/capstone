@@ -17,7 +17,7 @@ addGlobe(e) {
   let longitude = this.refs.longitude.value;
   let magnitude = this.refs.magnitude.value;
   $.ajax({
-    url: '/api/data',
+    url: '/api/globe',
     type: 'POST',
     data: { name, category, latitude, longitude, magnitude }
   }).done( globe => {
