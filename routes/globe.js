@@ -50,7 +50,7 @@ function readJSONFile(filename, callback) {
 }
 
 router.get('/population', (req, res) => {
-  readJSONFile('/Users/stormbringer3/desktop/DevCap/capstone/client/components/globe/population.json', function (err, json) {
+  readJSONFile('../client/components/globe/assets/population.json', function (err, json) {
     if (err)
       console.log(err)
     res.json(json);
