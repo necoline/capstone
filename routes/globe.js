@@ -14,24 +14,31 @@ router.get('/', function(req, res, next) {
 router.post('/', (req, res) => {
   new Globe ({
     name: req.body.name,
-    category: req.body.category,
-    latitude: req.body.latitude,
-    longitude: req.body.longitude,
-    magnitude: req.body.magnitude
+    category: req.body.category
+    //latitude: req.body.latitude,
+    //longitude: req.body.longitude,
+    //magnitude: req.body.magnitude
   }).save( (err, globe) => {
-    res.json(globe);
+    if (err)
+      return res.json(err)
+    return res.json(globe);
   });
 });
-//append new points onto the data set PUT
+//append new points onto the data set PUSH
 router.put('/:id', (req, res) => {
-  Globe.findById(req.params.id, (err, globe) => {
-    globe.lattitude.push(req.body.latitude),
-    globe.longitude.push(req.body.longitude),
-    globe.magnitude.push(req.body.magnitude),
-    globe.save( (err, globe) => {
-      res.json(globe);
-    })
-  });
+  Globe.findByIdAndUpdate(req.params.id,
+    { $push: {
+      latitude: req.body.latitude,
+      longitude: req.body.longitude,
+      magnitude: req.body.magnitude
+    }},
+    { safe: true, new: true },
+    (err, globe) => {
+      if (err)
+        console.log('ERROR')
+      return res.json(globe)
+    }
+  );
 });
 //delete the data point
 
