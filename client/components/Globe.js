@@ -41,19 +41,16 @@ class Globe extends React.Component {
           dataType: 'json',
           type: 'GET'
         }).done( data => {
-          debugger
           window.data = data;
           this.displayData(false);
           this.globe.animate();
           $('#sAll').html('Show all topics ('+(data.length/4)+')');
         }).fail( (data) => {
-          debugger
         })
     }
   }
 
   displayData(label) {
-    debugger
     this.globe.resetData();
     this.globe.addData(window.data, {format: 'legend', showLabel: label});
     this.globe.createPoints();
@@ -78,7 +75,7 @@ class Globe extends React.Component {
         {/*these titles need to be dynamically extracted from the user csv file */}
         <div id="currentInfo">
           <div id="sOther" className="topic"></div>
-          <div id="sRun" className="topic">Human Development</div>
+          <div id="sRun" className="topic" onClick="">Human Development</div>
           <div id="sBike" className="topic">Female Education</div>
           <div id="sWalk" className="topic">Male Education</div>
           <div id="sAll" className="topic">&nbsp;</div>
