@@ -10,6 +10,11 @@ var fs = require("fs");
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
+//get globe for user on MyProject page
+router.get('/:id', function(req, res, next) {
+  res.send( globe )
+})
+
 //create data set entry points POST
 router.post('/', (req, res) => {
   new Globe ({
