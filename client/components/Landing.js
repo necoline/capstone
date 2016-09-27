@@ -1,7 +1,7 @@
 import React from 'react';
-// import WebGLGlobe from './WebGLGlobe';
+import WebGLGlobe from './WebGLGlobe';
 
-    // <WebGLGlobe />
+ 
 const Landing = () => (
   <div>
     <h3>This is the landing page where we will insert a sample globe </h3>

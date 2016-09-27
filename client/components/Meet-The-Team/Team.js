@@ -66,7 +66,7 @@ class Team extends React.Component {
 								<div className="hover_img">
 								<img src={Neco} alt="" />
 								</div>
-								<span className="name-color">U of U, DPL, MBA</span>
+								<span className="name-color">U of U, DPL, MBA, JS, Esq</span>
 								<h4 className="name-color"><span className="first-name">Necoline </span><span className="second-name">Hubner</span></h4>
 							</a>	
 							<ul>
