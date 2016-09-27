@@ -7,9 +7,9 @@ let Schema = mongoose.Schema;
 let Globe = new Schema({
 	name: { type : String, unique : true, required : true },
 	category: { type : String, required : true },
-  latitude: { type : Array, required : true },
-  longitude: { type : Array, required : true },
-  magnitude: { type : Array, required : true }
+  latitude: { type : Array },
+  longitude: { type : Array },
+  magnitude: { type : Array }
 });
 
 //User.plugin(passportLocalMongoose);
