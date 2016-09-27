@@ -51,6 +51,23 @@ h2 {
   font-family: 'Exo', sans-serif;
 }
 
+/* 02. GENERAL SETTINGS ============================================ */
+
+* {margin: 0; padding: 0;}
+
+p {line-height: 160%;}
+
+a {text-decoration: none; color: #fff; transition: all 0.1s ease-in;}
+img {border: 0;}
+
+/*body {
+  background: #fff;
+  color: #fff;
+  font-family: norwester, PT Sans Narrow, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+}*/
+
 html {
   height: 100%;
 }
