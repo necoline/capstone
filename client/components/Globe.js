@@ -11,7 +11,6 @@ class Globe extends React.Component {
       this.setState({ webGLError: true });
     } else {
       let colors = [0x00ff00, 0x0066ff, 0xe20800, 0xffdd00, 0];
-      debugger
       this.globe = window.DAT.Globe( $('#container')[0], (label) => {
           return new THREE.Color(colors[label]);
       });
