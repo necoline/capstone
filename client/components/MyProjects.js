@@ -20,6 +20,9 @@ class MyProjects extends React.Component {
       setState( globes );
     })
   }
+  launchGlobe() {
+    
+  }
 
   render() {
     return(
