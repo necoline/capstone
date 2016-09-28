@@ -92,6 +92,7 @@ body {
   border-radius: 3px;
   right: 10px;
   padding: 3px 10px 0 10px;
+  margin-top: 130px;
 }
 
 #currentInfo {
@@ -101,6 +102,7 @@ body {
   top: 63px;
   border-top: 1px solid rgba(255,255,255,0.4);
   padding: 10px;
+  margin-top: 130px;
 }
 
 a {
@@ -124,6 +126,7 @@ a:hover {
   border-radius: 3px;
   font: 27px serif;
   padding: 10px;
+  margin-top: 130px;
 }
 
 .topic {
