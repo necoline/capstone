@@ -9,10 +9,10 @@ class JohnBio extends React.Component {
 	show() {
 		return (
 			<div style={{ color: 'white' }}>
-				Bacon ipsum dolor amet venison swine brisket ham hock beef ribs pig frankfurter pork loin ribeye.
-				Picanha tail ham hock, tenderloin chicken short ribs alcatra spare ribs ham beef ribs salami bacon.
-				Chuck filet mignon beef ribs, ground round beef leberkas venison strip steak tail spare ribs.
-				Pork chop bacon capicola, venison short ribs kevin hamburger leberkas doner tongue ball tip beef sirloin shankle.
+				Bacon ipsum dolor amet venison swine brisket ham hock beef ribs pig frankfurter pork loin ribeye. 
+				Picanha tail ham hock, tenderloin chicken short ribs alcatra spare ribs ham beef ribs salami bacon. 
+				Chuck filet mignon beef ribs, ground round beef leberkas venison strip steak tail spare ribs. 
+				Pork chop bacon capicola, venison short ribs kevin hamburger leberkas doner tongue ball tip beef sirloin shankle. 
 				let mignon frankfurter pancetta kevin.
 			</div>
 		);
