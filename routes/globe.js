@@ -47,29 +47,4 @@ router.put('/:id', (req, res) => {
 });
 //delete the data point
 
-<<<<<<< HEAD
-function readJSONFile(filename, callback) {
-  fs.readFile(filename, function (err, data) {
-    if(err) {
-      callback(err);
-      return;
-    }
-    try {
-      callback(null, JSON.parse(data));
-    } catch(exception) {
-      callback(exception);
-    }
-  });
-}
-
-router.get('/population', (req, res) => {
-  readJSONFile('../../client/components/globe/assets/population.json', function (err, json) {
-    if (err)
-      console.log(err)
-    res.json(json);
-  });
-})
-
-=======
->>>>>>> f9000cd12fa73e02551ef4fee5a46f00e2ec4498
 module.exports = router;
