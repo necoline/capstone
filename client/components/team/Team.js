@@ -1,5 +1,8 @@
 import React from 'react';
 import JohnBio from './JohnBio';
+import NecoBio from './NecoBio';
+import CameronBio from './CameronBio';
+import ParkerBio from './ParkerBio';
 import John from '../../../public/images/johncolor.png';
 import Johngs from '../../../public/images/johncolorgs.png';
 import Neco from '../../../public/images/Necolineco.png';
@@ -12,13 +15,32 @@ import Parkergs from '../../../public/images/BondParkerBondgs.png';
 class Team extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { showJohn: false }
+		this.state = { showJohn: false, showNeco: false, showCameron: false, showParker: false }
 		this.johnToggle = this.johnToggle.bind(this);
+		this.necoToggle = this.necoToggle.bind(this);
+		this.cameronToggle = this.cameronToggle.bind(this);
+		this.parkerToggle = this.parkerToggle.bind(this);
 	}
 
 	johnToggle(e) {
 		e.preventDefault();
 		this.setState({ showJohn: !this.state.showJohn });
+	}
+
+	necoToggle(e) {
+		e.preventDefault();
+		this.setState({ showNeco: !this.state.showNeco });
+	}
+
+	cameronToggle(e) {
+		e.preventDefault();
+		this.setState({ showCameron: !this.state.showCameron });
+	}
+
+	parkerToggle(e) {
+		e.preventDefault();
+		this.setState({ showParker: !this.state.showParker });
+
 	}
 
 	render() {
@@ -28,7 +50,7 @@ class Team extends React.Component {
 				<h3>Meet The Team</h3> 
 				<div className="separator"></div>
 				<div className="row">
-					<div className="col-md-8 col-md-offset-2">
+					<div className="col m10 offset-m1">
 						<p>	We are a sincere and dedicated team of students/future graduates of Dev Point Labs.
 								Our goal is to create, design, and build websites that kick ass! It has been an amazing 
 								journey to get to where we are today and we feel confident that we can present to you 
@@ -40,7 +62,7 @@ class Team extends React.Component {
 					
 					<div className="row">
 					
-						<div className="col-md-3">
+						<div className="col m3">
 							<a href="#" className="member-profile">
 								<div className="unhover_img">
 									<img src={Johngs} alt="Image of John Amador"/>
@@ -48,7 +70,7 @@ class Team extends React.Component {
 								<div className="hover_img" id="john-click" onClick={this.johnToggle}>
 									<img src={John} alt="" />
 								</div>
-								<span className="name-color">Web Designer Warrior Poet</span>
+								<span className="name-color">Web Designer - Warrior Poet</span>
 								<h4 className="name-color"><span className="first-name">John </span><span className="second-name">Amador</span></h4>
 							</a>	
 							<ul>
@@ -58,13 +80,13 @@ class Team extends React.Component {
 							</ul>
 						</div>
 						
-						<div className="col-md-3">
+						<div className="col m3">
 							<a href="#" className="member-profile">
 								<div className="unhover_img">
-								<img src={Necogs} alt="" />
+								  <img src={Necogs} alt="" />
 								</div>
-								<div className="hover_img">
-								<img src={Neco} alt="" />
+								<div className="hover_img" id="neco-click" onClick={this.necoToggle}>
+								  <img src={Neco} alt="Necoline Hubner" />
 								</div>
 								<span className="name-color">U of U, DPL, MBA, JS, Esq</span>
 								<h4 className="name-color"><span className="first-name">Necoline </span><span className="second-name">Hubner</span></h4>
@@ -76,13 +98,13 @@ class Team extends React.Component {
 							</ul>
 						</div>
 						
-						<div className="col-md-3">
+						<div className="col m3">
 							<a href="#" className="member-profile">
 								<div className="unhover_img">
 								<img src={Camerongs} alt="" />
 								</div>
-								<div className="hover_img">
-								<img src={Cameron} alt="" />
+								<div className="hover_img" id="cameron-click" onClick={this.cameronToggle}>
+								<img src={Cameron} alt="Cameron Packer" />
 								</div>
 								<span className="name-color">JS DB Ninja, Patriot, Marine</span>
 								<h4 className="name-color"><span className="first-name">Cameron </span><span className="second-name">Packer</span></h4>
@@ -94,13 +116,13 @@ class Team extends React.Component {
 							</ul>					
 						</div>
 						
-						<div className="col-md-3">
+						<div className="col m3">
 							<a href="#" className="member-profile">
 								<div className="unhover_img">
 								<img src={Parkergs} alt="" />
 								</div>
-								<div className="hover_img">
-								<img src={Parker} alt="" />
+								<div className="hover_img" id="parker-click" onClick={this.parkerToggle}>
+								<img src={Parker} alt="BondParkerBond" />
 								</div>
 								<span className="name-color">Coding Giant - (Literally) TA - Student Advisor</span>
 								<h4 className="name-color"><span className="first-name">Bond </span><span className="second-name">Parker Bond</span></h4>
@@ -112,11 +134,22 @@ class Team extends React.Component {
 							</ul>						
 						</div>
 						{/* Next row for hidden bios */}
-						<div className="col-md-3 john-show">
-							<JohnBio show={this.state.showJohn} />
+						<div className="row">
+							<div className="col m3 john-show">
+								<JohnBio show={this.state.showJohn} />
+							</div>
+							<div className="col m3 neco-show">
+								<NecoBio show={this.state.showNeco} />
+							</div>	
+							<div className="col m3 cameron-show">
+								<CameronBio show={this.state.showCameron} />
+							</div>
+							<div className="col m3 parker-show">
+								<ParkerBio show={this.state.showParker} />
+							</div>	
 						</div>
-
 					</div>
+						
 						
 					<div className="clear"></div>
 					

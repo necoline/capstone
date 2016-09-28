@@ -13,12 +13,13 @@
 
 .name-color {
 	font-family: 'PT Sans Narrow';
-	color: white;
+	color: black;
 }
 
 .first-name {
 	display: block;
 	position: relative;
+	color: white;
 	left: -40px;
 	top: 10px;
 	font-size: 20px;
@@ -29,6 +30,7 @@
 .second-name {
 	margin-top: -10px;
 	margin-left: 2.5em;
+	color: white;
 	font-size: 32px;
 	font-size: 125% !important;
 }
@@ -61,13 +63,6 @@ p {line-height: 160%;}
 a {text-decoration: none; color: #fff; transition: all 0.1s ease-in;}
 img {border: 0;}
 
-/*body {
-  background: #fff;
-  color: #fff;
-  font-family: norwester, PT Sans Narrow, sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-}*/
 
 html {
   height: 100%;
@@ -161,13 +156,20 @@ a:hover {
 
 .clear {clear: both;}
 
+body {
+  background: #fff;
+  color: #fff;
+  font-family: norwester, PT Sans Narrow, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+}
 
 /* 03. SPEAKERS SETTINGS ============================================ */
 
 #speakers { /* BG for props*/
 	padding: 25px 0;
-	background: #4593e3;
-	text-align: center;
+	background: #000000;
+	text-align: center;	
 }
 
 #speakers p { /* team paragraph*/
@@ -211,7 +213,7 @@ a:hover {
 }
 
 #speakers img:hover {
-	border: 15px solid #304ffe;
+	border: 15px solid #ffffff;
 	position: relative;
 	z-index: 10;
 	transition: all 0.1s ease-in;
@@ -223,7 +225,7 @@ a:hover {
 	top: -64px;
 	left: -42px;
 	display: inline-block;
-	background: #4593e3;
+	background: #cccccc;
 	border-radius: 0 16px 16px 0;
 	font-size: 16px;
 }
