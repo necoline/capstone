@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import { connect } from 'react-redux';
 
 // *adding the class
 class NewProject extends React.Component {
@@ -22,7 +23,7 @@ addGlobe(e) {
   $.ajax({
     url: '/api/globe',
     type: 'POST',
-    data: { name, category }
+    data: { name, category, userId: this.props.userId }
   }).done( globe => {
     this.refs.form.reset();
     this.setState({ hasRequired: true, globe })
@@ -49,7 +50,7 @@ dataSets() {
   let globe = this.state.globe;
   let lat = globe.latitude;
   let long = globe.longitude;
-  let mag = globe.magnitude
+  let mag = globe.magnitude;
   return lat.map( (point, i) => {
     return (
     <tr key={i}>
@@ -97,4 +98,8 @@ render () {
   </div>
  )}
 }
-export default NewProject;
+
+const mapStateToProps = (state) => {
+  return { userId: state.auth.id }
+}
+export default connect(mapStateToProps)(NewProject);

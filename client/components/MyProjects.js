@@ -5,7 +5,7 @@ class MyProjects extends React.Component {
   constructor(props) {
     super(props);
     this.getGlobes = this.getGlobes.bind(this);
-    this.state.globes = {};
+    this.state.globes = [];
   }
 
   componentWillMount() {
@@ -20,15 +20,12 @@ class MyProjects extends React.Component {
       setState( globes );
     })
   }
-  launchGlobe() {
-    
-  }
 
   render() {
     return(
 
      <div>
-       You can see your projects here
+       {this.state.globes}
      </div>
     );
   }

@@ -12,12 +12,14 @@ router.get('/', function(req, res, next) {
 });
 //get globe for user on MyProject page
 router.get('/:id', function(req, res, next) {
-  res.send( globe )
+
+  res.send( globes )
 })
 
 //create data set entry points POST
 router.post('/', (req, res) => {
   new Globe ({
+    userId: req.body.userId,
     name: req.body.name,
     category: req.body.category
     //latitude: req.body.latitude,

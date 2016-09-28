@@ -5,6 +5,7 @@ let Schema = mongoose.Schema;
 //let passportLocalMongoose = require('passport-local-mongoose');
 
 let Globe = new Schema({
+	userId: { type : String, required : true },
 	name: { type : String, unique : true, required : true },
 	category: { type : String, required : true },
   latitude: { type : Array },
