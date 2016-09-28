@@ -230,6 +230,7 @@ body {
 	font-size: 16px;
 }
 
+
 /* Member Image Hover Effect */
 .hover_img {
   display: none;
@@ -239,11 +240,26 @@ body {
 	color: black;
 }
 
+.member-profile:hover .first-name, .second-name{ 
+	text-decoration-color: red !important;
+}
+
+.member-profile:hover .second-name{ 
+	text-decoration-color: red;
+	color: white;
+}
+
 .member-profile:hover .unhover_img{
+  text-decoration-color: red;
   display: none;
 }
 
+.member-profile: {
+	text-decoration-color: red;
+}
+
 .member-profile:hover .hover_img {
+  text-decoration-color: red;
   display: block;
 }
 
