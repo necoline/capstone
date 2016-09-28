@@ -31,6 +31,7 @@ class App extends React.Component {
           <li><Link to="/dashboard">Dashboard</Link></li>
           <li><Link to="/myProjects">My Projects</Link></li>
           <li><Link to="/newProject">New Project</Link></li>
+          <li><Link to="/team">Team</Link></li>
           <li><a onClick={() => this.props.dispatch(logout())}>Logout</a></li>
         </div>
       )

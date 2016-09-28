@@ -19,7 +19,7 @@ function readJSONFile(filename, callback) {
 router.get('/', function(req, res, next) {
   console.log('GETTING DATA');
   // readJSONFile('/Users/cameronpacker/Desktop/JavaScript Info/Capstone/gender.json', (err, json) => {
-  readJSONFile('/Users/hannahhubner/Desktop/DevPoint/HW/capstone/capstone/gender.json', (err, json) => {
+  readJSONFile('gender.json', (err, json) => {
   // readJSONFile('/Users/stormbringer3/Desktop/DevCap/capstone/gender.json', (err, json) => {
     res.json(json);
   })
