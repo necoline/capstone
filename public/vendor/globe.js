@@ -107,12 +107,8 @@ DAT.Globe = function(container, colorFn) {
 
     shader = Shaders['earth'];
     uniforms = THREE.UniformsUtils.clone(shader.uniforms);
-
-<<<<<<< HEAD:client/components/globe/globe.js
-    uniforms['texture'].value = THREE.ImageUtils.loadTexture(imgDir+'./assets/world.jpg');
-=======
+    
     uniforms['texture'].texture = THREE.ImageUtils.loadTexture(imgDir+'world.jpg');
->>>>>>> f9000cd12fa73e02551ef4fee5a46f00e2ec4498:public/vendor/globe.js
 
     material = new THREE.MeshShaderMaterial({
 
