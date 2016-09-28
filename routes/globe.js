@@ -11,9 +11,10 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 //get globe for user on MyProject page
-router.get('/:id', function(req, res, next) {
-
-  res.send( globes )
+router.get('/user_globes', function(req, res, next) {
+  Globe.find({userId: req.body.userId}, (err, globes) => {
+    res.json(globes)
+  })
 })
 
 //create data set entry points POST

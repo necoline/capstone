@@ -1,11 +1,12 @@
 import React from 'react';
 import $ from 'jquery';
+import { connect } from 'react-redux';
 
 class MyProjects extends React.Component {
   constructor(props) {
     super(props);
     this.getGlobes = this.getGlobes.bind(this);
-    this.state.globes = [];
+    this.state = { globes: [] };
   }
 
   componentWillMount() {
@@ -14,21 +15,31 @@ class MyProjects extends React.Component {
 
   getGlobes() {
     $.ajax({
-      url: '/:id',
+      url: '/api/globes/user_globes',
       type: 'GET',
+      data: { userId: this.props.userId }
     }).done( ( globes ) => {
-      setState( globes );
+      this.setState( globes );
     })
   }
 
   render() {
+    let globes = this.state.globes.map( globe => {
+      return (
+        <ul></ul>
+      )
+    })
     return(
 
      <div>
-       {this.state.globes}
+       {globes}
      </div>
     );
   }
 }
 
-export default MyProjects;
+const mapStateToProps = (state) => {
+  return { userId: state.auth.id }
+}
+
+export default connect(mapStateToProps)(MyProjects);
