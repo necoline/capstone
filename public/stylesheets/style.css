@@ -45,7 +45,7 @@ h2 {
 }
 
 .nav-wrapper {
-  background-color: #0d47a1;
+  background-color: #000000;
   color: #18FFFF;
 }
 
@@ -71,7 +71,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #000000 url('imgs/loading.gif') center center no-repeat;
+  background:url('../globe_background.jpg') center center no-repeat;
   color: #ffffff;
   font-family: norwester, PT Sans Narrow, sans-serif;
   font-size: 13px;
@@ -162,7 +162,7 @@ a:hover {
 #speakers { /* BG for props*/
 	padding: 25px 0;
 	background: #000000;
-	text-align: center;	
+	text-align: center;
 }
 
 #speakers p { /* team paragraph*/
@@ -233,11 +233,11 @@ a:hover {
 	color: black;
 }
 
-.member-profile:hover .first-name, .second-name{ 
+.member-profile:hover .first-name, .second-name{
 	text-decoration-color: red !important;
 }
 
-.member-profile:hover .second-name{ 
+.member-profile:hover .second-name{
 	text-decoration-color: red;
 	color: white;
 }
