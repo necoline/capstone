@@ -11,6 +11,7 @@ class Globe extends React.Component {
       this.setState({ webGLError: true });
     } else {
       let colors = [0x00ff00, 0x0066ff, 0xe20800, 0xffdd00, 0];
+      debugger
       this.globe = window.DAT.Globe( $('#container')[0], (label) => {
           return new THREE.Color(colors[label]);
       });
@@ -57,7 +58,7 @@ class Globe extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="landing">
         <div id="container"></div>
         <div id="info">
           Created by Necoline
@@ -73,16 +74,15 @@ class Globe extends React.Component {
 
         {/*these titles need to be dynamically extracted from the user csv file */}
         <div id="currentInfo">
-          <div id="sOther" className="topic"></div>
-          <div id="sRun" className="topic" onClick="">Human Development</div>
-          <div id="sBike" className="topic">Female Education</div>
-          <div id="sWalk" className="topic">Male Education</div>
+          <div id="sFirst" className="topic"></div>
+          <div id="sSecond" className="topic" onClick="">Human Development</div>
+          <div id="sThird" className="topic">Female Education</div>
+          <div id="sFourth" className="topic">Male Education</div>
           <div id="sAll" className="topic">&nbsp;</div>
         </div>
 
-        {/* Dynamically Added */}
         <div id="title">
-          Users Globe
+          Gender Development
         </div>
 
         <a id="ce" href="http://www.chromeexperiments.com/globe">
