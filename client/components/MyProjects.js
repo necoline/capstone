@@ -27,12 +27,27 @@ class MyProjects extends React.Component {
 
   render() {
     let globes = this.state.globes.map( globe => {
-      return (<li key={globe._id}> {globe.name} {globe.category} </li>)
+      return (
+          <tr className="white-border">
+            <td key={globe._id} className="white-border"> {globe.name} </td>
+            <td className="white-border"> {globe.category} </td>
+            <td className="white-border"><button className="btn grey">Edit</button></td>
+            <td className="white-border"><button className="btn grey">Launch Globe</button></td>
+          </tr>
+      )
     })
     return (
-      <ul>
-       {globes}
-      </ul>
+      <table className="white-border">
+        <tbody>
+          <tr className="white-border">
+            <th>Globe Name</th>
+            <th>Globe category</th>
+            <th>Edit</th>
+            <th>Launch Globe</th>
+          </tr>
+          {globes}
+       </tbody>
+      </table>
     )
   }
 }

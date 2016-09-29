@@ -61,6 +61,10 @@ h2 {
 
 /* 02. GENERAL SETTINGS ============================================ */
 
+.white-border {
+	border: 1px solid white;
+}
+
 * {margin: 0; padding: 0;}
 
 p {line-height: 160%;}

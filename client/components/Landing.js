@@ -23,7 +23,7 @@ class Landing extends React.Component {
   render() {
     return (
       <div className="background">
-        <Globe data={this.state.globeData}/>
+        <Globe data={this.state.globeData} />
       </div>
     );
   }
