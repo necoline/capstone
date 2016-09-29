@@ -6,6 +6,10 @@ class Globe extends React.Component {
     this.state = { webGLError: false }
   }
 
+  componentDidUpdate() {
+    this.showGlobe();
+  }
+
   componentDidMount() {
     if(!window.Detector.webgl) {
       this.setState({ webGLError: true });
@@ -35,18 +39,15 @@ class Globe extends React.Component {
           $('.topic').removeClass('active');
         });
 
-        $.ajax({
-          url: '/api/data',
-          dataType: 'json',
-          type: 'GET'
-        }).done( data => {
-          window.data = data;
-          this.displayData(false);
-          this.globe.animate();
-          $('#sAll').html('Show all topics ('+(data.length/4)+')');
-        }).fail( (data) => {
-        })
+        this.showGlobe()
     }
+  }
+
+  showGlobe() {
+    window.data = this.props.data;
+    this.displayData(false);
+    this.globe.animate();
+    $('#sAll').html('Show all topics ('+(data.length/4)+')');
   }
 
   displayData(label) {

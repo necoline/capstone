@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 });
 //get globe for user on MyProject page
 router.get('/user_globes', function(req, res, next) {
-  Globe.find({userId: req.body.userId}, (err, globes) => {
+  Globe.find({userId: req.query.userId}, (err, globes) => {
     res.json(globes)
   })
 })

@@ -14,27 +14,26 @@ class MyProjects extends React.Component {
   }
 
   getGlobes() {
+    console.log(this.props.userId)
     $.ajax({
-      url: '/api/globes/user_globes',
+      url: '/api/globe/user_globes',
       type: 'GET',
       data: { userId: this.props.userId }
     }).done( ( globes ) => {
-      this.setState( globes );
+      console.table(globes)
+      this.setState({ globes: globes });
     })
   }
 
   render() {
     let globes = this.state.globes.map( globe => {
-      return (
-        <ul></ul>
-      )
+      return (<li key={globe._id}> {globe.name} {globe.category} </li>)
     })
-    return(
-
-     <div>
+    return (
+      <ul>
        {globes}
-     </div>
-    );
+      </ul>
+    )
   }
 }
 
