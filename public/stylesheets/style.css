@@ -16,6 +16,11 @@
 	color: black;
 }
 
+.name-color:hover {
+	text-decoration: none !important;
+	background-color: black !important;
+}
+
 .first-name {
 	display: block;
 	position: relative;
@@ -247,8 +252,9 @@ a:hover {
   display: none;
 }
 
-.member-profile: {
-	text-decoration-color: red;
+.member-profile:hover { /* any hover */
+	text-decoration: none;
+	background-color: black;
 }
 
 .member-profile:hover .hover_img {
