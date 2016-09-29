@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import { connect } from 'react-redux';
 
+
 class MyProjects extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +23,7 @@ class MyProjects extends React.Component {
     }).done( ( globes ) => {
       console.table(globes)
       this.setState({ globes: globes });
-    })
+    }).fail( (err) => { debugger})
   }
 
   render() {
@@ -31,8 +32,21 @@ class MyProjects extends React.Component {
           <tr className="white-border">
             <td key={globe._id} className="white-border"> {globe.name} </td>
             <td className="white-border"> {globe.category} </td>
-            <td className="white-border"><button className="btn grey">Edit</button></td>
-            <td className="white-border"><button className="btn grey">Launch Globe</button></td>
+            <td className="white-border">
+              <button
+                className="btn grey"
+                >
+                  Edit
+              </button>
+            </td>
+            <td className="white-border">
+              <button
+                className="btn grey"
+                onClick={() => this.props.history.push(`/globe/${globe._id}`)}
+                >
+                  Launch Globe
+              </button>
+            </td>
           </tr>
       )
     })
