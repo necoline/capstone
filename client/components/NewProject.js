@@ -93,6 +93,9 @@ render () {
             {this.dataSets()}
           </tbody>
         </table>
+        <div>
+        <button className="btn">Globe Complete</button>
+        </div>
       </div>
     }
   </div>

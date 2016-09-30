@@ -22,7 +22,7 @@ class MyProjects extends React.Component {
       type: 'GET',
       data: { userId: this.props.userId }
     }).done( ( globes ) => {
-      console.table(globes)
+      //console.table(globes)
       this.setState({ globes: globes });
     }).fail( (err) => { debugger})
   }
