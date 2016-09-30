@@ -16,7 +16,6 @@ class MyProjects extends React.Component {
   }
 
   getGlobes() {
-    console.log(this.props.userId)
     $.ajax({
       url: '/api/globe/user_globes',
       type: 'GET',

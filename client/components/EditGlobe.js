@@ -5,14 +5,15 @@ import $ from 'jquery';
 class EditGlobe extends React.Component {
   constructor(props) {
     super(props);
-    //this.updateGlobe = this.updateGlobe.bind(this);
-    //this.dataSets = this.dataSets.bind(this);
+    this.updateGlobe = this.updateGlobe.bind(this);
+    // this.dataSets = this.dataSets.bind(this);
     this.getGlobe = this.getGlobe.bind(this);
+    // this.llmPoints = this.llmPoints.bind(this);
     this.state = { globe: {} };
   }
-componentDidMount() {
+componentWillMount() {
   this.getGlobe();
-  debugger
+  // this.llmPoints();
 }
 
 // componentDidMount() {
@@ -28,20 +29,20 @@ getGlobe() {
   })
 }
 
-// updateGlobe(e) {
-//   e.preventDefault();
-//   let longitude = this.refs.longitude.value;
-//   let latitude = this.refs.latitude.value;
-//   let magnitude = this.refs.magnitude.value;
-//   $.ajax({
-//     url: `/api/globe/${this.state.globe._id}`,
-//     type: 'PUT',
-//     data: { latitude, longitude, magnitude }
-//   }).done( globe => {
-//     this.refs.form2.reset();
-//     this.setState({ globe })
-//   })
-// }
+updateGlobe(e) {
+  e.preventDefault();
+  let longitude = this.refs.longitude.value;
+  let latitude = this.refs.latitude.value;
+  let magnitude = this.refs.magnitude.value;
+  $.ajax({
+    url: `/api/globe/${this.state.globe._id}`,
+    type: 'PUT',
+    data: { latitude, longitude, magnitude }
+  }).done( globe => {
+    this.refs.form2.reset();
+    this.setState({ globe })
+  })
+}
 
   // dataSets() {
   //   let globe = this.state.globe;
@@ -57,6 +58,11 @@ getGlobe() {
   //     </tr>
   //   )
   //   });
+  // }
+
+  // llmPoints() {
+  //   let globe = this.data;
+  //   console.log(globe)
   // }
 
   render() {
