@@ -58,4 +58,13 @@ router.put('/:id', (req, res) => {
 });
 //delete the data point
 
+router.delete('/:id', (req, res) => {
+  Globe.findById(req.params.id, (err, globe) => {
+    globe.remove();
+    res.status(200).send({success: true});
+  });
+});
+
+
+
 module.exports = router;

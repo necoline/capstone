@@ -31,7 +31,6 @@ class SingleGlobe extends React.Component {
 render() {
   return (
     <div>
-      this is working
       <Globe data={this.state.globeData} />
     </div>
   )}

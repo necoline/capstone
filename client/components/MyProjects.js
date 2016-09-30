@@ -7,6 +7,7 @@ class MyProjects extends React.Component {
   constructor(props) {
     super(props);
     this.getGlobes = this.getGlobes.bind(this);
+    this.deleteGlobe = this.deleteGlobe.bind(this);
     this.state = { globes: [] };
   }
 
@@ -24,6 +25,20 @@ class MyProjects extends React.Component {
       console.table(globes)
       this.setState({ globes: globes });
     }).fail( (err) => { debugger})
+  }
+
+  deleteGlobe(id) {
+    debugger
+    $.ajax({
+      url: `api/globe/${id}`,
+      type:'DELETE'
+    }).done( (globes) => {
+      this.props.refresh();
+    }).fail( err => {
+      console.log(err);
+    });
+  }
+
   }
 
   render() {
@@ -44,8 +59,17 @@ class MyProjects extends React.Component {
               <button
                 className="btn grey"
                 onClick={() => this.props.history.push(`/globe/${globe._id}`)}
-                >
+              >
                   Launch Globe
+              </button>
+            </td>
+            <td className="white-border">
+              <button
+                className="btn grey"
+                key={globe._id}
+                onClick={() => this.deleteboard(globe._id) }
+                >
+                  Delete
               </button>
             </td>
           </tr>
@@ -59,6 +83,7 @@ class MyProjects extends React.Component {
             <th>Globe category</th>
             <th>Edit</th>
             <th>Launch Globe</th>
+            <th>Delete</th>
           </tr>
           {globes}
        </tbody>
