@@ -77,15 +77,12 @@ class Globe extends React.Component {
 
         {/*these titles need to be dynamically extracted from the user csv file */}
         <div id="currentInfo">
-          <div id="sFirst" className="topic"></div>
-          <div id="sSecond" className="topic" onClick="">Human Development</div>
-          <div id="sThird" className="topic">Female Education</div>
-          <div id="sFourth" className="topic">Male Education</div>
-          <div id="sAll" className="topic">&nbsp;</div>
+          <div id="sFirst" className="topic">Model Data</div>
+          {/* <div id="sAll" className="topic">&nbsp;</div> */}
         </div>
 
         <div id="title">
-          Gender Development
+          Model Globe
         </div>
 
         <a id="ce" href="http://www.chromeexperiments.com/globe">
