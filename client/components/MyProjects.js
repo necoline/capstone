@@ -29,12 +29,13 @@ class MyProjects extends React.Component {
   render() {
     let globes = this.state.globes.map( globe => {
       return (
-          <tr className="white-border">
+          <tr key={globe._id} className="white-border">
             <td key={globe._id} className="white-border"> {globe.name} </td>
             <td className="white-border"> {globe.category} </td>
             <td className="white-border">
               <button
                 className="btn grey"
+                onClick={() => this.props.history.push(`/globeEdit/${globe._id}`)}
                 >
                   Edit
               </button>

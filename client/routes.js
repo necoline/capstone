@@ -10,6 +10,7 @@ import Landing from './components/Landing';
 import Login from './components/Login';
 import Team from './components/team/Team';
 import SingleGlobe from './components/SingleGlobe';
+import EditGlobe from './components/EditGlobe';
 
 const UserIsAuthenticated = UserAuthWrapper({
   authSelector: state => state.auth,
@@ -30,6 +31,7 @@ export default (
       <Route path="/newProject" component={UserIsAuthenticated(NewProject)} />
       <Route path="/myProjects" component={UserIsAuthenticated(MyProjects)} />
       <Route path="/globe/:id" component={UserIsAuthenticated(SingleGlobe)} />
+      <Route path="/globeEdit/:id" component={UserIsAuthenticated(EditGlobe)} />
       <Route path="*" component={NotFound} />
     </Route>
   </Route>
