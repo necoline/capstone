@@ -28,18 +28,17 @@ class MyProjects extends React.Component {
   }
 
   deleteGlobe(id) {
-    debugger
     $.ajax({
       url: `api/globe/${id}`,
       type:'DELETE'
     }).done( (globes) => {
-      this.props.refresh();
+      this.getGlobes();
     }).fail( err => {
       console.log(err);
     });
   }
 
-  }
+
 
   render() {
     let globes = this.state.globes.map( globe => {
@@ -67,7 +66,7 @@ class MyProjects extends React.Component {
               <button
                 className="btn grey"
                 key={globe._id}
-                onClick={() => this.deleteboard(globe._id) }
+                onClick={() => this.deleteGlobe(globe._id) }
                 >
                   Delete
               </button>
