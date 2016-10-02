@@ -6,7 +6,12 @@ import $ from 'jQuery';
 class Landing extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { globeData: [] }
+    this.state = { globeData: [],
+                   globe: {
+                     name: "Human Development",
+                     category: "Gender Education"
+                   }
+                 }
   }
 
   componentDidMount() {
@@ -23,7 +28,7 @@ class Landing extends React.Component {
   render() {
     return (
       <div className="background">
-        <Globe data={this.state.globeData} />
+        <Globe data={this.state.globeData} details={this.state.globe} />
       </div>
     );
   }

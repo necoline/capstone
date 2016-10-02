@@ -24,6 +24,8 @@ class SingleGlobe extends React.Component {
         globeData.push(parseFloat(mag[i]))
         globeData.push(counter++)
       })
+
+      debugger
       this.setState({ globe, globeData })
     })
   }
@@ -31,7 +33,7 @@ class SingleGlobe extends React.Component {
 render() {
   return (
     <div>
-      <Globe data={this.state.globeData} />
+      <Globe data={this.state.globeData} details={this.state.globe} />
     </div>
   )}
 }

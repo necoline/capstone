@@ -14,12 +14,23 @@ class Globe extends React.Component {
     if(!window.Detector.webgl) {
       this.setState({ webGLError: true });
     } else {
-      let colors = [0x00ff00, 0x0066ff, 0xe20800, 0xffdd00, 0];
-      // latitude.length do
-      // colors.push(0x00ff00)
+      let colors = [
+        0xFFEBEE,
+        0xFFCDD2,
+        0xEF9A9A,
+        0xE57373,
+        0xEF5350,
+        0xF44336,
+        0xE53935,
+        0xD32F2F,
+        0xC62828,
+        0xB71C1C,
+        0
+      ];
+
 
       this.globe = window.DAT.Globe( $('#container')[0], (label) => {
-          return new THREE.Color(0x03A9F4);
+          return new THREE.Color(0xFFEBEE);
       });
 
       $('.topic').show();
@@ -27,7 +38,7 @@ class Globe extends React.Component {
       $('.topic').each( (i) => {
         let htmlcolor = colors[i].toString(16);
         htmlcolor = '000000'.substr(0, 6 - htmlcolor.length) + htmlcolor;
-        $(this).css('border-left', '20px solid #'+htmlcolor);
+        $(this).css('border-left', '20px solid #'+ htmlcolor);
           if (i < 4) {
             $(this).click( () => {
                this.displayData(i+1);
@@ -59,6 +70,8 @@ class Globe extends React.Component {
     this.globe.createPoints();
   }
 
+
+
   render() {
     return (
       <div id="landing">
@@ -77,12 +90,11 @@ class Globe extends React.Component {
 
         {/*these titles need to be dynamically extracted from the user csv file */}
         <div id="currentInfo">
-          <div id="sFirst" className="topic">Model Data</div>
-          {/* <div id="sAll" className="topic">&nbsp;</div> */}
+          <div id="sFirst" className="topic">{this.props.details.category}</div>
         </div>
 
         <div id="title">
-          Model Globe
+          {this.props.details.name}
         </div>
 
         <a id="ce" href="http://www.chromeexperiments.com/globe">
