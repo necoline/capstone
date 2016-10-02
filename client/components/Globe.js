@@ -19,7 +19,7 @@ class Globe extends React.Component {
       // colors.push(0x00ff00)
 
       this.globe = window.DAT.Globe( $('#container')[0], (label) => {
-          return new THREE.Color(colors[label]);
+          return new THREE.Color(0x03A9F4);
       });
 
       $('.topic').show();
