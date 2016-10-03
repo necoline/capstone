@@ -7,6 +7,7 @@ class Globe extends React.Component {
   }
 
   componentDidUpdate() {
+    this.createColors(this.props.data);
     this.showGlobe();
   }
 
@@ -28,25 +29,25 @@ class Globe extends React.Component {
         0
       ];
 
-
       this.globe = window.DAT.Globe( $('#container')[0], (label) => {
           return new THREE.Color(0xFFEBEE);
+          // return new THREE.Color(label % 2 ? 0xFFEBEE : 0xEF9A9A);
       });
 
       $('.topic').show();
 
-      $('.topic').each( (i) => {
-        let htmlcolor = colors[i].toString(16);
-        htmlcolor = '000000'.substr(0, 6 - htmlcolor.length) + htmlcolor;
-        $(this).css('border-left', '20px solid #'+ htmlcolor);
-          if (i < 4) {
-            $(this).click( () => {
-               this.displayData(i+1);
-               $('.topic').removeClass('active');
-               $(this).addClass('active');
-            });
-          }
-        });
+      // $('.topic').each( (i) => {
+      //   let htmlcolor = colors[i].toString(16);
+      //   htmlcolor = '000000'.substr(0, 6 - htmlcolor.length) + htmlcolor;
+      //   $(this).css('border-left', '20px solid #'+ htmlcolor);
+      //     if (i < 4) {
+      //       $(this).click( () => {
+      //          this.displayData(i+1);
+      //          $('.topic').removeClass('active');
+      //          $(this).addClass('active');
+      //       });
+      //     }
+      //   });
 
         $('#sAll').click( () => {
           this.displayData(false);
@@ -56,6 +57,18 @@ class Globe extends React.Component {
         this.showGlobe()
     }
   }
+
+  createColors(data) {
+    let colorMag = []
+    data.forEach( (entry, i) => {
+      let s = i + 2;
+      s % 4 ? true : colorMag.push(entry)
+    })
+    const maxNum = Math.max(...colorMag);
+    const block = maxNum/10;
+
+  }
+
 
   showGlobe() {
     window.data = this.props.data;
