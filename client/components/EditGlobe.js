@@ -6,10 +6,10 @@ class EditGlobe extends React.Component {
   constructor(props) {
     super(props);
     this.updateGlobe = this.updateGlobe.bind(this);
-    // this.dataSets = this.dataSets.bind(this);
+    this.dataSets = this.dataSets.bind(this);
     this.getGlobe = this.getGlobe.bind(this);
     // this.llmPoints = this.llmPoints.bind(this);
-    this.state = { globe: {} };
+    this.state = { globe: { latitude: [], longitude: [], magnitude: []} };
   }
 componentWillMount() {
   this.getGlobe();
@@ -44,21 +44,21 @@ updateGlobe(e) {
   })
 }
 
-  // dataSets() {
-  //   let globe = this.state.globe;
-  //   let lat = globe.latitude;
-  //   let long = globe.longitude;
-  //   let mag = globe.magnitude;
-  //   return lat.map( (point, i) => {
-  //     return (
-  //     <tr key={i}>
-  //       <td style={{ color: "#ffffff !important" }}>{lat[i]}</td>
-  //       <td className="white-text">{long[i]}</td>
-  //       <td>{mag[i]}</td>
-  //     </tr>
-  //   )
-  //   });
-  // }
+  dataSets() {
+    let globe = this.state.globe;
+    let lat = globe.latitude;
+    let long = globe.longitude;
+    let mag = globe.magnitude;
+    return lat.map( (point, i) => {
+      return (
+      <tr key={i}>
+        <td style={{ color: "#ffffff !important" }}>{lat[i]}</td>
+        <td className="white-text">{long[i]}</td>
+        <td>{mag[i]}</td>
+      </tr>
+    )
+    });
+  }
 
   // llmPoints() {
   //   let globe = this.data;
@@ -86,7 +86,7 @@ updateGlobe(e) {
               </tr>
             </thead>
             <tbody>
-              {/* {this.dataSets()} */}
+              {this.dataSets()}
             </tbody>
           </table>
         </div>
