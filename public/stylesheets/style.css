@@ -18,7 +18,7 @@
 
 .name-color:hover {
 	text-decoration: none !important;
-	background-color: black !important;
+	background-color: none !important;
 }
 
 .first-name {
@@ -258,7 +258,7 @@ a:hover {
 
 .member-profile:hover { /* any hover */
 	text-decoration: none;
-	background-color: black;
+	background-color: none;
 }
 
 .member-profile:hover .hover_img {
