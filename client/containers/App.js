@@ -28,7 +28,7 @@ class App extends React.Component {
     if (this.props.auth.isAuthenticated) {
       return (
         <div>
-          <li><Link to="/dashboard">Dashboard</Link></li>
+          <li><Link to="/tutorial">Tutorial</Link></li>
           <li><Link to="/myProjects">My Projects</Link></li>
           <li><Link to="/newProject">New Project</Link></li>
           <li><Link to="/team">Team</Link></li>

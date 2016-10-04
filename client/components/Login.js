@@ -7,7 +7,7 @@ class Login extends React.Component {
     super(props);
     this.signUp = this.signUp.bind(this);
     this.signIn = this.signIn.bind(this);
-    let redirect = this.props.location.query.redirect || '/Dashboard';
+    let redirect = this.props.location.query.redirect || '/Tutorial';
     this.state = { error: false, redirect };
   }
 

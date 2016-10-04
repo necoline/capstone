@@ -3,7 +3,7 @@ import { Route, IndexRoute } from 'react-router';
 import App from './containers/App';
 import NotFound from './components/NotFound';
 import { UserAuthWrapper } from 'redux-auth-wrapper';
-import Dashboard from './components/Dashboard';
+import Tutorial from './components/Tutorial';
 import NewProject from './components/NewProject';
 import MyProjects from './components/MyProjects';
 import Landing from './components/Landing';
@@ -27,7 +27,7 @@ export default (
       <IndexRoute component={Landing} />
       <Route path="/login" component={Login} />
       <Route path="/team" component={Team} />
-      <Route path="/dashboard" component={UserIsAuthenticated(Dashboard)} />
+      <Route path="/tutorial" component={UserIsAuthenticated(Tutorial)} />
       <Route path="/newProject" component={UserIsAuthenticated(NewProject)} />
       <Route path="/myProjects" component={UserIsAuthenticated(MyProjects)} />
       <Route path="/globe/:id" component={UserIsAuthenticated(SingleGlobe)} />
