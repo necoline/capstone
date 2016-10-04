@@ -28,9 +28,9 @@ class Globe extends React.Component {
         0xB71C1C,
         0
       ];
-      
+
       this.globe = window.DAT.Globe( $('#container')[0], (label) => {
-          return new THREE.Color(0xFFEBEE);
+          return new THREE.Color(0x00E5FF);
           // return new THREE.Color(label % 2 ? 0xFFEBEE : 0xEF9A9A);
       });
 
