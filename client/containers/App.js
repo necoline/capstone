@@ -36,7 +36,7 @@ class App extends React.Component {
         </div>
       )
     } else {
-      return (<li><Link to="/login">Login</Link></li>);
+      return (<li><Link to="/login">Sign In</Link></li>);
     }
   }
 

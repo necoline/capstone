@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 // *adding the class
 class NewProject extends React.Component {
@@ -62,6 +63,10 @@ dataSets() {
   });
 }
 
+// goToPage = () => {
+//   console.log("go to page");
+// }
+
 render () {
   return (
   <div className="container">
@@ -94,7 +99,7 @@ render () {
           </tbody>
         </table>
         <div>
-        <button className="btn">Globe Complete</button>
+        <Link to="/MyProjects" className="btn grey">Globe Complete</Link>
         </div>
       </div>
     }

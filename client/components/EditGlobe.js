@@ -75,7 +75,7 @@ updateGlobe(e) {
             <input required placeholder="latitude" ref="latitude"></input>
             <input required placeholder="longitude" ref="longitude"></input>
             <input required placeholder="magnitude" ref="magnitude"></input>
-            <button className="btn" type="submit">Submit</button>
+            <button className="btn grey" type="submit">Submit</button>
           </form>
           <table className="table">
             <thead>
