@@ -28,7 +28,7 @@ class Globe extends React.Component {
         0xB71C1C,
         0
       ];
-
+      
       this.globe = window.DAT.Globe( $('#container')[0], (label) => {
           return new THREE.Color(0xFFEBEE);
           // return new THREE.Color(label % 2 ? 0xFFEBEE : 0xEF9A9A);
@@ -64,8 +64,8 @@ class Globe extends React.Component {
       let s = i + 2;
       s % 4 ? true : colorMag.push(entry)
     })
-    const maxNum = Math.max(...colorMag);
-    const block = maxNum/10;
+    // const maxNum = Math.max(...colorMag);
+    // const block = maxNum/10;
 
   }
 

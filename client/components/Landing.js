@@ -1,6 +1,6 @@
 import React from 'react';
 import Globe from './Globe';
-import $ from 'jQuery';
+import $ from 'jquery';
 
 
 class Landing extends React.Component {
