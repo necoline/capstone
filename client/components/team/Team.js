@@ -88,7 +88,7 @@ class Team extends React.Component {
 								<div className="hover_img" id="neco-click" onClick={this.necoToggle}>
 								  <img src={Neco} alt="Necoline Hubner" />
 								</div>
-								<span className="name-color">U of U, DPL, MBA, JS, Esq</span>
+								<span className="name-color">U of U, DPL, MS, JS, Esq</span>
 								<h4 className="name-color"><span className="first-name">Necoline </span><span className="second-name">Hubner</span></h4>
 							</a>	
 							<ul>
