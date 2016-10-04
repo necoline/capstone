@@ -69,7 +69,7 @@ render () {
       <form onSubmit={this.addGlobe} ref="form">
         <input placeholder="name" ref="name"></input>
         <input placeholder="category" ref="category"></input>
-        <button className="btn" type="submit">Submit</button>
+        <button className="btn grey" type="submit">Submit</button>
       </form>
       :
       <div>
@@ -79,7 +79,7 @@ render () {
           <input required placeholder="latitude" ref="latitude"></input>
           <input required placeholder="longitude" ref="longitude"></input>
           <input required placeholder="magnitude" ref="magnitude"></input>
-          <button className="btn" type="submit">Add</button>
+          <button className="btn grey" type="submit">Add</button>
         </form>
         <table className="table">
           <thead>

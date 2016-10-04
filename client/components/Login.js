@@ -34,13 +34,13 @@ class Login extends React.Component {
             <input ref="newEmail" placeholder="email" />
             <input type="password" ref="newPassword" placeholder="password"/>
             <br />
-            <button className="btn" type="submit">Sign Up</button>
+            <button className="btn grey" type="submit">Sign Up</button>
           </form>
           <h2 className="center">Sign In</h2>
           <form onSubmit={this.signIn}>
             <label><input ref="email" placeholder="email"/></label>
             <label><input type="password" ref="password" placeholder="password" /></label><br />
-            <button className="btn" type="submit">Sign In</button>
+            <button className="btn grey" type="submit">Sign In</button>
           </form>
         </div>
       </div>
