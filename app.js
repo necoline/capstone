@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/capstone'
+var mongoUri = process.env.MONGODB_URI || 'mongodb://heroku_xx3dj73t:17jm6i72lg0dbo7legvj3ukiu8@ds035776.mlab.com:35776/heroku_xx3dj73t'
 mongoose.connect(mongoUri)
 
 var routes = require('./routes/index');
@@ -40,7 +40,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('express-session')({
-  secret: process.env.SESSION_SECRET || 'thisissomethingsecret',
+  secret: process.env.SESSION_SECRET || 'secret',
   resave: false,
   saveUninitialized: false
 }));
