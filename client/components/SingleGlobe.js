@@ -25,7 +25,6 @@ class SingleGlobe extends React.Component {
         globeData.push(counter++)
       })
 
-      debugger
       this.setState({ globe, globeData })
     })
   }
