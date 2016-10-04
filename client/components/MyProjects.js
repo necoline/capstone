@@ -42,10 +42,10 @@ class MyProjects extends React.Component {
   render() {
     let globes = this.state.globes.map( globe => {
       return (
-          <tr key={globe._id} className="white-border">
-            <td key={globe._id} className="white-border"> {globe.name} </td>
-            <td className="white-border"> {globe.category} </td>
-            <td className="white-border">
+          <tr key={globe._id} className="text-align center">
+            <td key={globe._id} className="text-align center"> {globe.name} </td>
+            <td className="text-align center"> {globe.category} </td>
+            <td className="text-align center">
               <button
                 className="btn grey"
                 onClick={() => this.props.history.push(`/globeEdit/${globe._id}`)}
@@ -53,7 +53,7 @@ class MyProjects extends React.Component {
                   Edit
               </button>
             </td>
-            <td className="white-border">
+            <td className="text-align center">
               <button
                 className="btn grey"
                 onClick={() => this.props.history.push(`/globe/${globe._id}`)}
@@ -61,7 +61,7 @@ class MyProjects extends React.Component {
                   Launch Globe
               </button>
             </td>
-            <td className="white-border">
+            <td className="text-align center">
               <button
                 className="btn grey"
                 key={globe._id}
@@ -74,18 +74,20 @@ class MyProjects extends React.Component {
       )
     })
     return (
-      <table className="white-border">
-        <tbody>
-          <tr className="white-border">
-            <th>Globe Name</th>
-            <th>Globe category</th>
-            <th>Edit</th>
-            <th>Launch Globe</th>
-            <th>Delete</th>
-          </tr>
-          {globes}
-       </tbody>
-      </table>
+      <div className="container">
+        <table >
+          <tbody>
+            <tr>
+              <th className="text-align center">Globe Name</th>
+              <th className="text-align center">Globe category</th>
+              <th className="text-align center">Edit</th>
+              <th className="text-align center">Launch Globe</th>
+              <th className="text-align center">Delete</th>
+            </tr>
+            {globes}
+          </tbody>
+       </table>
+      </div>
     )
   }
 }

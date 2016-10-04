@@ -51,12 +51,9 @@ class Team extends React.Component {
 				<div className="separator"></div>
 				<div className="row">
 					<div className="col m10 offset-m1">
-						<p>	We are a sincere and dedicated team of students/future graduates of Dev Point Labs.
-								Our goal is to create, design, and build websites that kick ass! It has been an amazing
-								journey to get to where we are today and we feel confident that we can present to you
-								a solid example of the skills we have learned at Dev Point labs and what we have jointly
-								accomplished as a team. We are proud to present our project, Globe IT! We hope you like what
-								you see and welcome your feedback.
+						<p>	We are a sincere and dedicated team of students/future graduates of DevPoint Labs.
+								Our mission is to showcase our skills in javascript and provide an easy-to-use presentation tool.
+								It has been an amazing journey to get to where we are today and we are proud to present our project, Globe It! We hope you like what you see and welcome your feedback.
 						</p>
 					</div>
 
