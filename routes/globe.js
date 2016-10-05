@@ -65,6 +65,20 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+// router.delete('/api/:id', (req, res) => {
+//   Globe.findByIdAndUpdate(req.params.id, {
+//     remove.({
+//       latitude: req.body.latitude,
+//       longitude: req.body.longitude,
+//       magnitude: req.body.magnitude
+//     }), { safe: true}, (err, globe) => {
+//       if (err)
+//       console.log('ERROR')
+//       return res.json(globe)
+//     }
+//   })
+// })
+
 
 
 module.exports = router;
