@@ -80,7 +80,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background:url('../globe_background.jpg') center center no-repeat;
+  background:url('../globe_background.jpg') center center;
   color: #ffffff;
   font-family: norwester, PT Sans Narrow, sans-serif;
   font-size: 13px;
