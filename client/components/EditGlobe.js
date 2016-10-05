@@ -44,14 +44,15 @@ updateGlobe(e) {
   })
 }
 
-// deleteGlobe() {
+// deleteData() {
 //   $.ajax({
 //      url: `/api/globe/${this.props.params.id}`,
 //      type: 'DELETE',
-//      data: 
+//      data: { latitude, longitude, magnitude }
+//   }).done( globe => {
+//    this.setState({ globe })
 //   })
-//
-//}
+// }
 
   dataSets() {
     let globe = this.state.globe;
