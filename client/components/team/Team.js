@@ -9,7 +9,7 @@ import Neco from '../../../public/images/Necolineco.png';
 import Necogs from '../../../public/images/Necolinegs.png';
 import Cameron from '../../../public/images/cameronco.png';
 import Camerongs from '../../../public/images/camerongs.png';
-import Parker from '../../../public/images/BondParkerBond.png';
+import Parker from '../../../public/images/BondParkerBondco.jpg';
 import Parkergs from '../../../public/images/BondParkerBondgs.png';
 
 class Team extends React.Component {
