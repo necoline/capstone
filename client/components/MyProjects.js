@@ -37,8 +37,6 @@ class MyProjects extends React.Component {
     });
   }
 
-
-
   render() {
     let globes = this.state.globes.map( globe => {
       return (

@@ -65,19 +65,21 @@ router.delete('/:id', (req, res) => {
   });
 });
 
-// router.delete('/api/:id', (req, res) => {
-//   Globe.findByIdAndUpdate(req.params.id, {
-//     remove.({
-//       latitude: req.body.latitude,
-//       longitude: req.body.longitude,
-//       magnitude: req.body.magnitude
-//     }), { safe: true}, (err, globe) => {
-//       if (err)
-//       console.log('ERROR')
-//       return res.json(globe)
-//     }
-//   })
-// })
+router.put('/:id/delete_points', (req, res) => {
+  let index = parseInt(req.body.index);
+  Globe.findById(req.params.id, (err, globe) => {
+    let latitude = [...globe.latitude.slice(0, index), ...globe.latitude.slice(index + 1, globe.latitude.length)];
+    let longitude = [...globe.longitude.slice(0, index), ...globe.latitude.slice(index + 1, globe.longitude.length)];
+    let magnitude = [...globe.magnitude.slice(0, index), ...globe.magnitude.slice(index + 1, globe.latitude.length)];
+    globe.latitude = latitude;
+    globe.magnitude = magnitude;
+    globe.longitude = longitude;
+    globe.save( (err, obj) => {
+      return res.json(obj);
+    })
+  });
+});
+
 
 
 

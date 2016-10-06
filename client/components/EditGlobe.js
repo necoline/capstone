@@ -44,15 +44,15 @@ updateGlobe(e) {
   })
 }
 
-// deleteData() {
-//   $.ajax({
-//      url: `/api/globe/${this.props.params.id}`,
-//      type: 'DELETE',
-//      data: { latitude, longitude, magnitude }
-//   }).done( globe => {
-//    this.setState({ globe })
-//   })
-// }
+deleteData(index) {
+  $.ajax({
+     url: `/api/globe/${this.props.params.id}/delete_points`,
+     type: 'PUT',
+     data: { index }
+  }).done( globe => {
+   this.setState({ globe })
+  })
+}
 
   dataSets() {
     let globe = this.state.globe;
@@ -65,6 +65,7 @@ updateGlobe(e) {
         <td style={{ color: "#ffffff !important" }}>{lat[i]}</td>
         <td className="white-text">{long[i]}</td>
         <td>{mag[i]}</td>
+        <td><button className="btn grey" onClick={() => this.deleteData(i)}>Delete</button></td>
       </tr>
     )
     });
@@ -93,6 +94,7 @@ updateGlobe(e) {
                 <th>lat</th>
                 <th>long</th>
                 <th>mag</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
