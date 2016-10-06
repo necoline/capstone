@@ -6,7 +6,7 @@ class CameronBio extends React.Component {
 		return (
 			<div style={{ color: 'white' }}>
 				Cameron Packer - Technical Support Professional and JavaScript Developer.
-				I love to be outside, but coding is my passion. I love being able to make wonder and amazing software that can better peoples lives. 
+				I love to be outside, but coding is my passion. I love being able to make wonderful and amazing software that can better peoples lives. 
 				I aspire to be a full stack developer some day and plan to make some amazing software!
 			</div>
 		);
