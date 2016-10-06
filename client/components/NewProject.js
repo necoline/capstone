@@ -47,6 +47,17 @@ updateGlobe(e) {
   })
 }
 
+deleteData = (index) => {
+  debugger
+  $.ajax({
+     url: `/api/globe/${this.state.globe._id}/delete_points`,
+     type: 'PUT',
+     data: { index }
+  }).done( globe => {
+   this.setState({ globe })
+  })
+}
+
 dataSets() {
   let globe = this.state.globe;
   let lat = globe.latitude;
@@ -58,6 +69,7 @@ dataSets() {
       <td style={{ color: "#ffffff !important" }}>{lat[i]}</td>
       <td className="white-text">{long[i]}</td>
       <td>{mag[i]}</td>
+      <td><button className="btn grey" onClick={() => this.deleteData(i)}>Delete</button></td>
     </tr>
   )
   });
@@ -92,6 +104,7 @@ render () {
               <th>lat</th>
               <th>long</th>
               <th>mag</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
