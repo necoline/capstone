@@ -1,19 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
-class Tutorial extends React.Component {
-  componentWillMount() {
-    // window.addEventListner()
-  //   $(document).ready(function(){
-  //   $('.collapsible').collapsible({
-  //     accordion : false
-  //   });
-  // });
-
-  }
-
-  render() {
-    return (
+const Tutorial = () => (
       <div className="Container">
         <h1 className="text-align center" style={{ color: '#f5f5f5' }}>
           Make your own Globe
@@ -21,7 +9,7 @@ class Tutorial extends React.Component {
 
         <div className="row">
           <h3 className="col m10 offset-m3"style={{ color: '#f5f5f5' }}>
-            View from 1000 ft
+            Overview
           </h3>
         <div className="col m8 push-m2 pull-2m" style={{ color: '#f5f5f5' }}>
           <p>
@@ -31,12 +19,6 @@ class Tutorial extends React.Component {
             <br></br>    Always available
             <br></br>    Always stunning
           </p>
-          <ul className="collapsible" data-collapsible="accordion">
-            <li>
-              <button className="collapsible-header"><i className="material-icons">pageview</i></button>
-              <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-            </li>
-          </ul>
         </div>
       </div>
       <div className="row">
@@ -112,7 +94,6 @@ class Tutorial extends React.Component {
       </div>
 
       </div>
-  )}
-}
+);
 
 export default Tutorial;

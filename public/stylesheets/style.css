@@ -58,6 +58,9 @@ h2 {
   font-family: 'Exo', sans-serif;
 }
 
+.collapsible-header {
+	border: null;
+}
 
 /* 02. GENERAL SETTINGS ============================================ */
 
