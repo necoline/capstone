@@ -73,8 +73,8 @@ class MyProjects extends React.Component {
     })
     return (
       <div className="container">
-        <table >
-          <tbody>
+        <table>
+          <tbody className="fSize">
             <tr style={{ borderBottom: "solid 1px white"}}>
               <th className="text-align center">Globe Name</th>
               <th className="text-align center">Globe category</th>

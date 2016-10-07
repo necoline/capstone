@@ -47,6 +47,7 @@ h2 {
 
 .btn {
   font-family: 'Dosis', sans-serif;
+	font-size: 12px;
 }
 
 .nav-wrapper {
@@ -58,9 +59,16 @@ h2 {
   font-family: 'Exo', sans-serif;
 }
 
-.collapsible-header {
-	border: null;
+.tutorial{
+	font-size: 15px;
+	line-height: 40px;
 }
+
+.fSize{
+	font-size: 15px;
+}
+
+.
 
 /* 02. GENERAL SETTINGS ============================================ */
 
