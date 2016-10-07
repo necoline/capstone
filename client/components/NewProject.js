@@ -112,7 +112,7 @@ render () {
           </tbody>
         </table>
         <div>
-        <Link to="/MyProjects" className="btn grey">Globe Complete</Link>
+        <Link to="/MyProjects" className="btn grey">Globe Complete!</Link>
         </div>
       </div>
     }
