@@ -6,8 +6,7 @@ class ParkerBio extends React.Component {
 	show() {
 		return (
 			<div style={{ color: 'white' }}>
-				Commander James Bond, C.M.G., R.N. (born April 13, 1968) is a Senior Operational Officer of the 'Double-O' ('00') branch, an ultra-covert Black Ops unit within the British Secret Intelligence Service (MI6). 
-				As an agent of MI6, Bond holds code number "007". The 'Double-O' prefix indicates his discretionary licence to kill in the performance of his duties. 
+				Parker is a 2 meter tall geek who loves programming in React.  He has an affinity for aesthetically pleasing code and insightful improvements.  He loves gaming in all its forms and stick figures by CGP Grey and XKCD.  After an amazing year of teaching at DevPoint Labs, he is moving on to exciting new adventures in coding. 
 			</div>
 		);
 	}
@@ -27,4 +26,3 @@ class ParkerBio extends React.Component {
 }
 
 export default ParkerBio;
-
