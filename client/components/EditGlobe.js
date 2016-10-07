@@ -78,26 +78,26 @@ deleteData(index) {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <div>
-          <p>{this.state.globe.name}</p>
-          <p>{this.state.globe.category}</p>
+          <p className="fSize" >{this.state.globe.name}</p>
+          <p className="fSize" >{this.state.globe.category}</p>
           <form onSubmit={this.updateGlobe} ref="form2">
             <input required placeholder="latitude" ref="latitude"></input>
             <input required placeholder="longitude" ref="longitude"></input>
             <input required placeholder="magnitude" ref="magnitude"></input>
-            <button className="btn grey" type="submit">Submit</button>
+            <button className="btn grey fSize" type="submit">Submit</button>
           </form>
           <table className="table">
             <thead>
               <tr>
-                <th>lat</th>
-                <th>long</th>
-                <th>mag</th>
-                <th></th>
+                <th className="fSize">lat</th>
+                <th className="fSize">long</th>
+                <th className="fSize">mag</th>
+                <th className="fSize"></th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="fSize">
               {this.dataSets()}
             </tbody>
           </table>

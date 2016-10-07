@@ -47,10 +47,10 @@ class Team extends React.Component {
 		return (
 		 	<div id="speakers">
 
-				<h3>Meet The Team</h3>
+				<h3 className="fSize">Meet The Team</h3>
 				<div className="separator"></div>
 				<div className="row">
-					<div className="col m10 offset-m1">
+					<div className="col m10 offset-m1 fSize">
 						<p>	We are a sincere and dedicated team of students/future graduates of DevPoint Labs.
 								Our mission is to showcase our skills in javascript and provide an easy-to-use presentation tool.
 								It has been an amazing journey to get to where we are today and we are proud to present our project, Globe It! We hope you like what you see and welcome your feedback.
