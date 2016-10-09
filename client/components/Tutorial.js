@@ -2,13 +2,12 @@ import React from 'react';
 import $ from 'jquery';
 import { Link } from 'react-router';
 
-class Tutorial extends React.Component {
+class Tutorial extends React.Component{
   constructor(props) {
     super(props);
   }
-
-render() {
-  return (
+  render() {
+      return (
       <div className="Container">
         <h1 className="text-align center" style={{ color: '#f5f5f5' }}>
           Make your own Globe
@@ -31,7 +30,7 @@ render() {
           Make your own globe
         </h3>
       <div className="col m8 push-m2 pull-2m tutorial" style={{ color: '#f5f5f5' }}>
-        <ol>
+        <ul>
           <li>
            Navigate to the New Projects page
           </li>
@@ -53,10 +52,8 @@ render() {
           <li>
             Globe Complete: Once you are ready to see your data on the globe, the 'Globe Complete' button will take you to your personal folder where you can view your globe or continue to add more data points.
           </li>
-        </ol>
-        <div>
-          <Link to="/NewProject" className="btn grey">View</Link>
-        </div>
+        </ul>
+        <Link to="/NewProject" className="btn grey">View</Link>
       </div>
       </div>
     <div className="row">
@@ -64,7 +61,7 @@ render() {
           Launching your globe
       </h3>
       <div className="col m8 push-m2 pull-2m tutorial" style={{ color: '#f5f5f5' }}>
-          <ol>
+          <ul>
             <li>
               Navigate to the My Projects page. This can either be done in the toolbar at the top of the screen or by hitting the 'Globe Complete' button listed at the bottom of the 'New Projects' page
             </li>
@@ -74,10 +71,8 @@ render() {
             <li>
               To launch your globe, simply click the 'Launch Globe' button and watch your data come to life with our dynamic technology.
             </li>
-          </ol>
-          <div>
-            <Link to="/MyProjects" className="btn grey">View</Link>
-          </div>
+          </ul>
+          <Link to="/MyProjects" className="btn grey">View</Link>
         </div>
       </div>
       <div className="row">
@@ -85,7 +80,7 @@ render() {
           Editing your globe
         </h3>
         <div className="col m8 push-m2 pull-2m tutorial" style={{ color: '#f5f5f5' }}>
-            <ol>
+            <ul>
               <li>
                 Navigate to the My Projects page using the toolbar at the top of the screen.
               </li>
@@ -95,12 +90,12 @@ render() {
               <li>
                 By clicking on the 'Edit' button, you will be taken to a page where you will be able to view all of your data points and continue adding points to the globe.
               </li>
-            </ol>
+            </ul>
         </div>
       </div>
 
       </div>
-    )}
+  )}
 }
 
 export default Tutorial;
