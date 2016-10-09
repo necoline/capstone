@@ -90,15 +90,15 @@ render () {
       </form>
       :
       <div>
-        <p>{this.state.globe.name}</p>
-        <p>{this.state.globe.category}</p>
+        <p className="fSize">{this.state.globe.name}</p>
+        <p className="fSize">{this.state.globe.category}</p>
         <form onSubmit={this.updateGlobe} ref="form2">
           <input required placeholder="latitude" ref="latitude"></input>
           <input required placeholder="longitude" ref="longitude"></input>
           <input required placeholder="magnitude" ref="magnitude"></input>
           <button className="btn grey" type="submit">Add</button>
         </form>
-        <table className="table">
+        <table className="table fSize">
           <thead>
             <tr>
               <th>lat</th>
@@ -112,7 +112,7 @@ render () {
           </tbody>
         </table>
         <div>
-        <Link to="/MyProjects" className="btn grey">Globe Complete</Link>
+        <Link to="/MyProjects" className="btn grey">Globe Complete!</Link>
         </div>
       </div>
     }

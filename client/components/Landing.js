@@ -8,8 +8,8 @@ class Landing extends React.Component {
     super(props);
     this.state = { globeData: [],
                    globe: {
-                     name: "Human Development",
-                     category: "Gender Education"
+                     name: "Code Conferences",
+                     category: "Coding Events Around the Globe"
                    }
                  }
   }
