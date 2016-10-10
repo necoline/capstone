@@ -2,15 +2,15 @@ import React from 'react';
 import JohnBio from './JohnBio';
 import NecoBio from './NecoBio';
 import CameronBio from './CameronBio';
-import ParkerBio from './ParkerBio';
+// import ParkerBio from './ParkerBio';
 import John from '../../../public/images/johncolor.png';
 import Johngs from '../../../public/images/johncolorgs.png';
 import Neco from '../../../public/images/Necolineco.png';
 import Necogs from '../../../public/images/Necolinegs.png';
 import Cameron from '../../../public/images/cameronco.png';
 import Camerongs from '../../../public/images/camerongs.png';
-import Parker from '../../../public/images/BondParkerBondco.jpg';
-import Parkergs from '../../../public/images/BondParkerBondgs.png';
+// import Parker from '../../../public/images/BondParkerBondco.jpg';
+// import Parkergs from '../../../public/images/BondParkerBondgs.png';
 
 class Team extends React.Component {
 	constructor(props) {
@@ -113,7 +113,7 @@ class Team extends React.Component {
 							</ul>
 						</div>
 
-						<div className="col m3">
+						{/* <div className="col m3">
 							<a href="#" className="member-profile">
 								<div className="unhover_img">
 								<img src={Parkergs} alt="" />
@@ -129,7 +129,7 @@ class Team extends React.Component {
 								<li><a href="#"  target="_blank"><i className="fa fa-linkedin"></i></a></li>
 								<li><a href="#" target="_blank"><i className="fa fa-foursquare"></i></a></li>
 							</ul>
-						</div>
+						</div> */}
 						{/* Next row for hidden bios */}
 						<div className="row">
 							<div className="col m3 john-show">
@@ -141,9 +141,9 @@ class Team extends React.Component {
 							<div className="col m3 cameron-show">
 								<CameronBio show={this.state.showCameron} />
 							</div>
-							<div className="col m3 parker-show">
+							{/* <div className="col m3 parker-show">
 								<ParkerBio show={this.state.showParker} />
-							</div>
+							</div> */}
 						</div>
 					</div>
 
