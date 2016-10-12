@@ -9,11 +9,10 @@ class JohnBio extends React.Component {
 	show() {
 		return (
 			<div className="fSize" style={{ color: 'white' }}>
-				Bacon ipsum dolor amet venison swine brisket ham hock beef ribs pig frankfurter pork loin ribeye.
-				Picanha tail ham hock, tenderloin chicken short ribs alcatra spare ribs ham beef ribs salami bacon.
-				Chuck filet mignon beef ribs, ground round beef leberkas venison strip steak tail spare ribs.
-				Pork chop bacon capicola, venison short ribs kevin hamburger leberkas doner tongue ball tip beef sirloin shankle.
-				let mignon frankfurter pancetta kevin.
+				John Amador is a customer service and technical support expert. He is currently Director of Tehnical Support for
+				iSolved software. He is also member of the the Senior Leadership Team and helps drive the direction of the company.
+				John's went to school for graphic arts and web design. His newly added skills with Javascript, html, and css will 
+				help him complete his skill set and move in to development with his present company.
 			</div>
 		);
 	}

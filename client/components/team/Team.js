@@ -10,6 +10,7 @@ import Necogs from '../../../public/images/Necolinegs.png';
 import Cameron from '../../../public/images/cameronco.png';
 import Camerongs from '../../../public/images/camerongs.png';
 import Parkergs from '../../../public/images/BondParkerBondgs.png';
+import Parkerco from '../../../public/images/BondParkerBond.png';
 
 class Team extends React.Component {
 	constructor(props) {
@@ -118,7 +119,7 @@ class Team extends React.Component {
 								<img src={Parkergs} alt="" />
 								</div>
 								<div className="hover_img" id="parker-click" onClick={this.parkerToggle}>
-								<img src={Parkergs} alt="BondParkerBond" />
+								<img src={Parkerco} alt="BondParkerBond" />
 								</div>
 								<span className="name-color">Coding Giant(Literally), TA</span>
 								<h4 className="name-color"><span className="first-name">Parker</span><span className="second-name">Bond</span></h4>
